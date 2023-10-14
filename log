@@ -79,3 +79,21 @@ heap.c:21:19: error: expected expression before ‘)’ token
       |                   ^
 Compilation failed
 f54d5c1
+Sat 14 Oct 2023 09:32:36 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:24:23: error: incompatible types when returning type ‘heapElem’ {aka ‘struct nodo’} but ‘void *’ was expected
+   24 |   return pq->heapArray[0]data;
+      |          ~~~~~~~~~~~~~^~~
+heap.c:24:26: error: expected ‘;’ before ‘data’
+   24 |   return pq->heapArray[0]data;
+      |                          ^~~~
+      |                          ;
+heap.c:25:1: error: control reaches end of non-void function [-Werror=return-type]
+   25 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+e900a53
