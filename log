@@ -2,3 +2,20 @@ Sun 08 Oct 2023 03:25:23 AM UTC:
  tests:  0|4
 total_score: 0/70
 1c882b3
+Sat 14 Oct 2023 09:30:48 PM UTC: 
+ heap.c | 15 +++++++++++++--
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:47:21: error: expected ‘;’ before ‘return’
+   47 |   newHeap->capac = 3
+      |                     ^
+      |                     ;
+   48 |   return newHeap;
+      |   ~~~~~~             
+heap.c:49:1: error: control reaches end of non-void function [-Werror=return-type]
+   49 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f434e0c
