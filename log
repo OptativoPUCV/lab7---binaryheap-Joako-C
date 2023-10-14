@@ -132,3 +132,9 @@ heap.c:46:45: error: expected ‘;’ before ‘i’
       |     ~                                        
 Compilation failed
 ff3904d
+Sat 14 Oct 2023 09:34:18 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|2
+total_score: 35/70
+c36df20

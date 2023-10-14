@@ -43,7 +43,7 @@ void heap_push(Heap* pq, void* data, int priority){
     if (priority <= pq->heapArray[parent].priority) {
       break;
     }
-    pq->heapArray[i] = pq->heapArray[parent]
+    pq->heapArray[i] = pq->heapArray[parent];
     i = parent;
   }
 
