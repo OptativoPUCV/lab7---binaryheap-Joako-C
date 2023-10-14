@@ -28,14 +28,14 @@ void* heap_top(Heap* pq){
 
 void heap_push(Heap* pq, void* data, int priority){
   if (pq->size >= pq->capac) {
-    pq->capac = 2 * pq->capac + 1; // Duplicar la capacidad más uno
+    pq->capac = 2 * pq->capac - 1; // Duplicar la capacidad más uno
     pq->heapArray = realloc(pq->heapArray, pq->capac * sizeof(heapElem));
     if (pq->heapArray == NULL) {
       exit(1);
     }
   }
 
-  int i = pq->size
+  int i = pq->size;
   pq->size++;
 
   while (i > 0) {
@@ -44,7 +44,7 @@ void heap_push(Heap* pq, void* data, int priority){
       break;
     }
     pq->heapArray[i] = pq->heapArray[parent]
-    i = parent
+    i = parent;
   }
 
   pq->heapArray[i].data = data;
