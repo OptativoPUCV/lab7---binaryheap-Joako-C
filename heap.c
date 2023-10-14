@@ -44,6 +44,6 @@ Heap* createHeap(){
     exit(1);
   }
   newHeap->size = 0;
-  newHeap->capac = 3
+  newHeap->capac = 3;
   return newHeap;
 }
