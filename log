@@ -103,3 +103,19 @@ Sat 14 Oct 2023 09:32:41 PM UTC:
  tests:  2|2
 total_score: 20/70
 d9ab66a
+Sat 14 Oct 2023 09:33:55 PM UTC: 
+ heap.c | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:39:3: error: expected ‘,’ or ‘;’ before ‘pq’
+   39 |   pq->size++;
+      |   ^~
+heap.c:46:45: error: expected ‘;’ before ‘i’
+   46 |     pq->heapArray[i] = pq->heapArray[parent]
+      |                                             ^
+      |                                             ;
+   47 |     i = parent
+      |     ~                                        
+Compilation failed
+f81782c
