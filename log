@@ -31,3 +31,18 @@ Sat 14 Oct 2023 09:31:25 PM UTC:
  tests:  1|3
 total_score: 10/70
 f14a5fa
+Sat 14 Oct 2023 09:31:34 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:40:35: error: implicit declaration of function ‘mlloc’; did you mean ‘malloc’? [-Werror=implicit-function-declaration]
+   40 |   newHeap->heapArray = (heapElem*)mlloc(3 * sizeof(heapElem));
+      |                                   ^~~~~
+      |                                   malloc
+heap.c:40:24: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   40 |   newHeap->heapArray = (heapElem*)mlloc(3 * sizeof(heapElem));
+      |                        ^
+cc1: all warnings being treated as errors
+Compilation failed
+d593b08

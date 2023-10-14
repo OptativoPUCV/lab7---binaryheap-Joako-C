@@ -37,7 +37,7 @@ Heap* createHeap(){
   if (newHeap == NULL) {
     exit(1);
   }
-  newHeap->heapArray = (heapElem*)malloc(3 * sizeof(heapElem));
+  newHeap->heapArray = (heapElem*)mlloc(3 * sizeof(heapElem));
   if (newHeap->heapArray == NULL) {
     exit(1);
   }
