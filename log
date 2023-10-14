@@ -46,3 +46,20 @@ heap.c:40:24: error: cast to pointer from integer of different size [-Werror=int
 cc1: all warnings being treated as errors
 Compilation failed
 d593b08
+Sat 14 Oct 2023 09:31:40 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:40:24: error: expected expression before ‘heapElem’
+   40 |   newHeap->heapArray  (heapElem*)malloc(3 * sizeof(heapElem));
+      |                        ^~~~~~~~
+heap.c:40:3: error: called object is not a function or function pointer
+   40 |   newHeap->heapArray  (heapElem*)malloc(3 * sizeof(heapElem));
+      |   ^~~~~~~
+heap.c:40:34: error: expected ‘;’ before ‘malloc’
+   40 |   newHeap->heapArray  (heapElem*)malloc(3 * sizeof(heapElem));
+      |                                  ^~~~~~
+      |                                  ;
+Compilation failed
+d6ea68c
