@@ -57,7 +57,7 @@ void heap_pop(Heap* pq){
     return;
   }
 
-  pq->size++;
+  pq->size--;
   if (pq->size > 0) {
     heapElem lastElem = pq->heapArray[pq->size];
     int i = 0;
@@ -68,7 +68,7 @@ void heap_pop(Heap* pq){
         child++;
       }
       
-      if (lastElem.priority >= pq->heapArray[child].priority) {
+      if (lastElem.priority <= pq->heapArray[child].priority) {
         break;
       }
       
