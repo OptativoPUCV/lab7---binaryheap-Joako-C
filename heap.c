@@ -74,7 +74,7 @@ void heap_pop(Heap* pq){
       
       pq->heapArray[i] = pq->heapArray[child];
       i = child;
-      child = 2 * i - 1;
+      child = 2 * i + 1;
     }
     
     pq->heapArray[i] = lastElem;
